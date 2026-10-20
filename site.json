@@ -1,0 +1,9 @@
+{
+  "_doc": "Shared settings for every app. See README.md. Fill publisher_name before publishing.",
+  "github_user": "mamamiagaa",
+  "site_url": "https://mamamiagaa.github.io",
+  "publisher_name": "",
+  "contact_email": "vandercammen.f@gmail.com",
+  "admob_publisher_ids": ["pub-8841292491956623"],
+  "default_lang": "fr"
+}

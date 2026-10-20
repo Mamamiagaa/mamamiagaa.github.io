@@ -1,0 +1,111 @@
+/* Shared stylesheet for every app page. Each page sets --accent (see build.py). */
+@font-face {
+  font-family: "Jakarta";
+  src: url("fonts/PlusJakartaSans.ttf") format("truetype");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+:root {
+  --ink: #15171a;
+  --paper: #fafaf8;
+  --card: #ffffff;
+  --muted: #6b6e73;
+  --line: #e7e7e2;
+  --soft: #f2f2ee;
+  --accent: #15171a;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f2f2ef;
+    --paper: #0d0e10;
+    --card: #17191c;
+    --muted: #9a9da2;
+    --line: #26292d;
+    --soft: #1c1e21;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 500 17px/1.6 "Jakarta", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+
+a { color: inherit; text-underline-offset: 3px; }
+
+h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -0.02em; font-weight: 800; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.2rem); margin: 0.2em 0; }
+h2 { font-size: 1.6rem; margin-top: 2.2em; }
+h3 { font-size: 1.15rem; margin-top: 1.8em; }
+
+.eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; font-weight: 700; color: var(--muted); margin: 0; }
+.lead { font-size: 1.3rem; color: var(--muted); margin: 0.2em 0 0.8em; }
+
+.hero { padding: 24px 0 8px; }
+.hero.small h1 { font-size: clamp(1.6rem, 4.5vw, 2.2rem); }
+.hero .icon { border-radius: 24px; display: block; }
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 700;
+  text-decoration: none;
+}
+.btn.ghost { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+
+.feature { width: 100%; height: auto; border-radius: 24px; border: 1px solid var(--line); margin: 28px 0 8px; }
+
+.cards { display: grid; gap: 12px; margin-top: 24px; }
+.card {
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px; border-radius: 24px;
+  background: var(--card); border: 1px solid var(--line);
+  text-decoration: none;
+}
+.card img { border-radius: 16px; flex: none; }
+.card strong { display: block; font-size: 1.15rem; }
+.card small { color: var(--muted); font-size: 0.95rem; }
+
+ul.checks { list-style: none; padding: 0; }
+ul.checks li { padding: 10px 0 10px 34px; border-bottom: 1px solid var(--line); position: relative; }
+ul.checks li::before {
+  content: ""; position: absolute; left: 0; top: 14px; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--accent);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 6.5' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+}
+
+.langs { display: flex; gap: 6px; justify-content: flex-end; }
+.langs a { padding: 6px 12px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 0.85rem; color: var(--muted); border: 1px solid var(--line); }
+.langs a.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.langs-inline a { font-weight: 700; }
+.back { color: var(--muted); text-decoration: none; font-weight: 700; }
+
+.prose { overflow-wrap: anywhere; }
+.prose p, .prose li { color: var(--ink); }
+.prose blockquote { margin: 1em 0; padding: 12px 16px; border-left: 3px solid var(--accent); background: var(--soft); border-radius: 0 12px 12px 0; }
+.prose code { font-size: 0.9em; background: var(--soft); padding: 1px 6px; border-radius: 6px; }
+.prose hr { border: 0; border-top: 1px solid var(--line); margin: 3em 0 1em; }
+.table { overflow-x: auto; margin: 1em 0; border: 1px solid var(--line); border-radius: 16px; }
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+th { background: var(--soft); font-weight: 700; }
+tr:last-child td { border-bottom: 0; }
+
+footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.95rem; }
+
+.draft { position: sticky; top: 0; z-index: 9; background: #c8372d; color: #fff; text-align: center; padding: 8px 12px; font-weight: 700; font-size: 0.9rem; }

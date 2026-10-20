@@ -1,0 +1,16 @@
+{
+  "_doc": "Copy this folder to apps/<slug>/ (slug = lowercase app name), then fill every field. See README.md.",
+  "slug": "monapp",
+  "name": "MonApp",
+  "package": "com.exemple.monapp",
+  "status": "coming_soon",
+  "effective_date": "2026-01-01",
+  "updated_date": "2026-01-01",
+  "accent": "#15171A",
+  "icon": "assets/icon.png",
+  "feature": { "fr": "assets/feature-fr.png", "en": "assets/feature-en.png", "es": "assets/feature-es.png" },
+  "tagline": { "fr": "", "en": "", "es": "" },
+  "summary": { "fr": "", "en": "", "es": "" },
+  "features": { "fr": [], "en": [], "es": [] },
+  "privacy": "privacy.md"
+}

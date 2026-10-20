@@ -1,0 +1,28 @@
+{
+  "_doc": "One file per app. Copy apps/_template to start a new one (see README.md).",
+  "slug": "listo",
+  "name": "Listo",
+  "package": "com.unappparjour.listo",
+  "status": "coming_soon",
+  "effective_date": "2026-10-20",
+  "updated_date": "2026-10-20",
+  "accent": "#0B8F62",
+  "icon": "assets/icon.png",
+  "feature": { "fr": "assets/feature-fr.png", "en": "assets/feature-en.png", "es": "assets/feature-es.png" },
+  "tagline": {
+    "fr": "Vos courses, rangées.",
+    "en": "Groceries, sorted.",
+    "es": "Tu compra, ordenada."
+  },
+  "summary": {
+    "fr": "Une liste de courses rangée automatiquement par rayon. Saisie rapide, hors ligne, sans compte.",
+    "en": "A grocery list sorted by aisle automatically. Quick entry, offline, no account.",
+    "es": "Una lista de la compra ordenada por secciones automáticamente. Rápida, sin conexión y sin cuenta."
+  },
+  "features": {
+    "fr": ["Rangement automatique par rayon", "« 2 baguettes » : la quantité est reconnue", "Panier, suggestions, partage en texte", "Hors ligne, sans compte, thème sombre", "Gratuite avec une bannière, ou sans pub pour 1,99 €"],
+    "en": ["Automatic aisle sorting", "\"2 baguettes\": quantity detected", "Cart, suggestions, text sharing", "Offline, no account, dark theme", "Free with one banner, or ad-free with a one-time purchase"],
+    "es": ["Orden automático por secciones", "«2 barras de pan»: la cantidad se reconoce", "Carrito, sugerencias, compartir en texto", "Sin conexión, sin cuenta, tema oscuro", "Gratis con un banner, o sin anuncios con un pago único"]
+  },
+  "privacy": "privacy.md"
+}
